@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.app {
+  display: flex; /* Use flexbox */
+}
+
+.side-nav {
+  flex: 0 0 250px;
+  background: #333;
+  color: white;
+  height: 128vh;
+  padding: 20px;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 20px 0;
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 500px;
+  max-height: 40px;
+}
+
+.transaction-item:hover {
+  background-color: #f0f0f0;
+}
+
+.transaction-item img {
+  width: 40px;
+  height: 40px;
+  padding-right: 10px;
+}
+
+.transaction-info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.provider {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.amount {
+  color: #555;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  float: right;
+  cursor: pointer;
+}
+
+.history-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.history h3 {
+  text-decoration: underline;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pagination li a,
+.pagination li button {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination li.active a,
+.pagination li.active button {
+  background-color: #333333;
+  color: #fff;
+  border-color: #333333;
+}
+
+.pagination li a:hover,
+.pagination li button:hover {
+  background-color: #f0f0f0;
+}

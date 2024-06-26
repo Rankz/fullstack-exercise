@@ -1,14 +1,27 @@
-export default function App() {
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import "./App.css";
+import ExpenseReport from "./features/expenseReport/ExpenseReport";
+import SideNav from "./features/expenseReport/components/sideNav/SideNav";
+
+const App: React.FC = () => {
   return (
-    <div className=" max-w-7xl mx-auto p-4">
-      <h1 className="text-4xl mb-4">Nous Fullstack challenge</h1>
-      <p className="text-xl my-2">This app has been scaffodled using:</p>
-      <ul className="list-disc list-inside">
-        <li>Vite</li>
-        <li>React</li>
-        <li>Typescript</li>
-        <li>Tailwind</li>
-      </ul>
-    </div>
+    <Router>
+      <div className="app">
+        <SideNav />
+        <div className="main-content">
+          <Routes>
+            <Route
+              path="/"
+              element={<h1>Welcome to My Expense Report App</h1>}
+            />
+            <Route path="/expense-report" element={<ExpenseReport />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
+
+export default App;
